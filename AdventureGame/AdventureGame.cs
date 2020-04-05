@@ -19,13 +19,10 @@ namespace AdventureGame
         {
             InitializeComponent();
 
-            player = new Player();
+            Location location = new Location(1, "Home", "This is your new Home.", null, null, null);
 
-            player.CurrentHitPoints = 10;
-            player.MaximumHitPoints = 10;
-            player.Gold = 20;
-            player.ExperiencePoints = 10;
-            player.Level = 1;
+            player = new Player(20, 200, 2, 20, 30);
+
 
             lbl_Experience.Text = player.ExperiencePoints.ToString();
             lbl_HitPoints.Text = player.CurrentHitPoints.ToString();

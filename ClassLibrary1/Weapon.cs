@@ -4,14 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace Engine
 {
-    class Weapon
+    public class Weapon: Item
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string NamePlural { get; set; }
         public int MaximumDemage { get; set; }
         public int MinimumDemage { get; set; }
+
+        public Weapon(int id, string name, string nameplural, int maxDemage, int minDemage) : base(id, name, nameplural)
+        {
+            MaximumDemage = maxDemage;
+            MinimumDemage = minDemage;
+        }
     }
 }
